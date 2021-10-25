@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>JFK Compack</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="templatemo" />
+    
+	<script src="https://kit.fontawesome.com/165340b7ab.js" crossorigin="anonymous"></script>
+	<link href="http://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic,700itali" rel="stylesheet">
+	<link href="http://fonts.googleapis.com/css?family=Raleway:400,900,800,700,500,200,100,600" rel="stylesheet">
+
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" />
+	<link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="bootstrap-4.0.0/dist/css/bootstrap.min.css.map"> -->
+    <link rel="stylesheet" href="css/misc.css" />
+    <link rel="stylesheet" href="css/red-scheme.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- JavaScripts -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+	<script src="bootstrap-4.0.0/dist/js/bootstrap.min.js.map"></script>
+    <script src="js/reverse_hook.js" defer></script>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+	  <!-- Modal  -->
+    <div
+      class="modal fade"
+      id="staticBackdrop"
+      data-backdrop="static"
+      data-keyboard="false"
+      tabindex="1000"
+      aria-labelledby="staticBackdrop"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered"">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Car Form</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="modalBody">
+            <div class="form-wrapper">
+              <!-- * Modal Form-->
+              <form method="post" id="carForm"> 
+                <!-- *name -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">
+                      <i class="fa fa-user mr-3" aria-hidden="true"></i> Name
+                    </span>
+                  </div>
+                  <input type="text" name="name" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="John Doe" required>
+                </div>
+                <!-- *email -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">
+                      <i class="fa fa-at mt-3" aria-hidden="true"></i> Email
+                    </span>
+                  </div>
+                  <input type="email" name="email" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="exampl@example.com" required>
+                </div>
+                
+                <!-- *phone -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">
+                      <i class="fa fa-phone mr-3" aria-hidden="true"></i> Phone
+                    </span>
+                  </div>
+                  <input type="tel" name="phone" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default" placeholder="+1234567890" required>
+                </div>
+                <!-- *action -->
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                    <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                  </div>
+                  <select name="interest" class="custom-select" id="inputGroupSelect01" required>
+                    <option selected>Choose...</option>
+                    <option value="swap">Swap</option>
+                    <option value="upgrade">Upgrade</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="hidden" name="car" value="" id="hiddenCarId">
+                </div>
+                <div class="form-group mt-3">
+                  <input type="submit" value="Submit" class="btn-block action-btn">
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+	<!-- End Modal  -->
+
+    <div class="responsive_menu">
+      <ul class="main_menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="store.html">Store</a></li>
+        <li><a href="services.html">Our Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="achysol.html">Achysol</a></li>
+        <li><a href="firstnotch.html">First Notch</a></li>
+      </ul>
+      <!-- /.main_menu -->
+    </div>
+    <!-- /.responsive_menu -->
+
+    <header class="site-header clearfix">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="pull-left logo">
+              <a href="index.html">
+                <img src="images/logooo.png" alt="Medigo by templatemo" />
+              </a>
+            </div>
+            <!-- /.logo -->
+
+            <div class="main-navigation pull-right">
+              <nav class="main-nav visible-md visible-lg">
+                <ul class="sf-menu">
+                  <li class="active"><a href="index.html">Home</a></li>
+                  <li><a href="store.html">Store</a></li>
+                  <li><a href="services.html">Our Services</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                  <li><a href="achysol.html">Achysol</a></li>
+                  <li><a href="firstnotch.html">First Notch</a></li>
+                </ul>
+                <!-- /.sf-menu -->
+              </nav>
+              <!-- /.main-nav -->
+
+              <!-- This one in here is responsive menu for tablet and mobiles -->
+              <div class="responsive-navigation visible-sm visible-xs">
+                <a href="#nogo" class="menu-toggle-btn">
+                  <i class="fa fa-bars"></i>
+                </a>
+              </div>
+              <!-- /responsive_navigation -->
+            </div>
+            <!-- /.main-navigation -->
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </header>
+    <!-- /.site-header -->
+
+    <section class="light-content our-team pt-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="section-header">
+              <h2 class="section-title">Go through our gallery</h2>
+              <p class="section-desc">
+                Browse though our current offerings and contact us for the best
+                deals!
+              </p>
+            </div>
+            <!-- /.section-header -->
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+      <div class="team-members">
+        <div class="container">
+          <div class="row py-5" id="carList"></div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+      <!-- /.team-members -->
+    </section>
+    <!-- /.our-team -->
+
+    <footer class="site-footer mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p class="copyright-text">Copyright &copy; 2021-2022 JFK Compack</p>
+          </div>
+          <!-- /.col-md-12 -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container -->
+    </footer>
+    <!-- /.site-footer -->
+
+    <!-- Scripts -->
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/medigo-custom.min.js"></script>
+  </body>
+</html>

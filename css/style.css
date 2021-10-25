@@ -1,0 +1,29 @@
+.action-btn{
+    border: 1px solid #bbb;
+    font-size: small;
+    border-radius: 5px;
+    padding: 0px 2px;
+    width: 65px;
+    background: transparent;
+    transition: .5s;
+}
+.action-btn:hover{
+    background-color: #ff555e;
+    color: #fff;
+    border: 1px solid transparent;
+}
+
+.member-content h5 a{
+    text-transform: capitalize !important;
+}
+.thumb-post{
+    width: 100%;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.thumb-post img{
+    width: 100%;
+    height: auto;
+}
