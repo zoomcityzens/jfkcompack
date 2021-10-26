@@ -1,5 +1,5 @@
 $(function () {
-  let debug = true;
+  let debug = false;
   let baseUrl = debug
     ? "http://localhost:8000/api/v1/"
     : "http://jfkcompack.pythonanywhere.com/api/v1/";
