@@ -32,10 +32,8 @@ SECRET_KEY = env.get('API_ID')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'https://5443-197-210-52-246.ngrok.io',
-    '5443-197-210-52-246.ngrok.io',
-    'localhost'
-
+    'localhost',
+    'jfkcompack.pythonanywhere.com'
 ]
 
 
