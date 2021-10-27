@@ -29,13 +29,11 @@ with open(ENV_PATH, 'r') as file:
 SECRET_KEY = env.get('API_ID')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = F
 
 ALLOWED_HOSTS = [
-    'https://5443-197-210-52-246.ngrok.io',
-    '5443-197-210-52-246.ngrok.io',
     'localhost'
-
+    'jfkcompack.pythonanywhere.com'
 ]
 
 
