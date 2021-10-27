@@ -29,7 +29,7 @@ with open(ENV_PATH, 'r') as file:
 SECRET_KEY = env.get('API_ID')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = F
+DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost'
