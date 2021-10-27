@@ -2,7 +2,7 @@ $(function () {
   let debug = false;
   let baseUrl = debug
     ? "http://localhost:8000/api/v1/"
-    : "http://jfkcompack.pythonanywhere.com/api/v1/";
+    : "https://jfkcompack.pythonanywhere.com/api/v1/";
   let carList = document.querySelector("#carList");
   let carForm = $("#carForm");
 
@@ -34,36 +34,46 @@ $(function () {
   if (carList) {
     displayAllCars()
       .then((data) => {
-        data.forEach((car) => {
-          carList.innerHTML += `
-        <div class="col-sm-12 col-md-3">
-              <div class="team-member card p-4 m-4">
-                <div class="thumb-post">
-                  <img src="${car.image}" alt="" loading="lazy" />
-                  <span class="member-role">Brand New</span>
+        if (data.length > 0){
+          data.forEach((car) => {
+            carList.innerHTML += `
+          <div class="col-sm-12 col-md-3">
+                <div class="team-member card p-4 m-4">
+                  <div class="thumb-post">
+                    <img src="${car.image}" alt="" loading="lazy" />
+                    <span class="member-role">Brand New</span>
+                  </div>
+                  <div class="member-content">
+                    <h5><a href="">${car.title}</a></h5>
+                    <p><small>Duis vitae consequat neque. Nulla pharetra eleifend nulla. </small></p> 
+                  </div>
+                  <div class="action-section">
+                    <!-- Button trigger modal -->
+                    <button
+                      type="button"
+                      class="action-btn text-center dynamicCardBtn"
+                      data-toggle="modal"
+                      data-target="#staticBackdrop"
+                      data-type="cardBtn"
+                      onclick="document.getElementById('hiddenCarId').setAttribute('value', '${car.id}')"
+                    >
+                      Select
+                    </button>
+                  </div>
                 </div>
-                <div class="member-content">
-                  <h5><a href="">${car.title}</a></h5>
-                  <p><small>Duis vitae consequat neque. Nulla pharetra eleifend nulla. </small></p> 
-                </div>
-                <div class="action-section">
-                  <!-- Button trigger modal -->
-                  <button
-                    type="button"
-                    class="action-btn text-center dynamicCardBtn"
-                    data-toggle="modal"
-                    data-target="#staticBackdrop"
-                    data-type="cardBtn"
-                    onclick="document.getElementById('hiddenCarId').setAttribute('value', '${car.id}')"
-                  >
-                    Select
-                  </button>
-                </div>
+                <!-- /.team-member -->
               </div>
-              <!-- /.team-member -->
+          `;
+          });
+        }
+        else{
+          console.log('Yello');
+          carList.innerHTML = `
+            <div class="col-12">
+                <h3 class="text-center text-muted"> We are so sorry there are no cars for sale yet <h3>
             </div>
-        `;
-        });
+          `;
+        }
       })
       .catch((err) => console.log(err));
   }
