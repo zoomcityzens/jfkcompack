@@ -32,7 +32,7 @@ SECRET_KEY = env.get('API_ID')
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'localhost'
+    'localhost',
     'jfkcompack.pythonanywhere.com'
 ]
 
