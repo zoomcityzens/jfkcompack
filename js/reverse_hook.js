@@ -41,11 +41,10 @@ $(function () {
                 <div class="team-member card p-4 m-4">
                   <div class="thumb-post">
                     <img src="${car.image}" alt="" loading="lazy" />
-                    <span class="member-role">Brand New</span>
                   </div>
                   <div class="member-content">
                     <h5><a href="">${car.title}</a></h5>
-                    <p><small>Duis vitae consequat neque. Nulla pharetra eleifend nulla. </small></p> 
+                    <p><small>${car.description}</small></p> 
                   </div>
                   <div class="action-section">
                     <!-- Button trigger modal -->
